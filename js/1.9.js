@@ -1,7 +1,7 @@
 let text =document.querySelector("[type=\"text\"]");
 let submat =document.querySelector("[type=\"submit\"]");
 let tsk=document.querySelector(".name");
-let sound =new Audio("/Swiss Bell Sound.mp3")
+let sound =new Audio("Swiss Bell Sound.mp3")
 let arryOfTask=[];
 // window.localStorage.clear();
 getlocalStorageTopage()
@@ -29,7 +29,7 @@ tsk.addEventListener("click",(e)=> {
         console.log(e.target.parentElement.parentElement);
         e.target.parentElement.parentElement.classList.toggle("done");
         togglrchecked(e.target.parentElement.parentElement.getAttribute("data-id"));
-        if(e.target.parentElement.parentElement.getAttribute("data-complete")) {
+        if(e.target.parentElement.parentElement.classList.contains("done")) {
             sound.play();
         }
     }
@@ -79,7 +79,6 @@ function addElementToPage(arryOfTask) {
         div.appendChild(document.createTextNode(adel.title));
         div.appendChild(div2);
         div.setAttribute("data-id",adel.id);
-        div.setAttribute("data-complete",adel.completed);
         tsk.appendChild(div);
         document.body.appendChild(tsk)
     })
