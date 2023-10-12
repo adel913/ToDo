@@ -1,0 +1,149 @@
+body {
+    background-image:url(/wallpaper.jpg);
+    padding: 0px 20px;
+}
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300x, 1fr));
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+form div {
+    display:flex;
+    gap: 5px;
+}
+input {
+    padding: 15px;
+    border-radius: 6px;
+    border: none;
+}
+input[ type="text"] {
+    flex-grow: 1;
+    background-color: burlywood;
+    color: white;
+}
+input:focus {
+    outline: none;
+}
+input::placeholder {
+    transition: 0.7s;
+}
+input:focus::placeholder {
+    opacity: 0;
+}
+input[type="submit"] {
+    background-color:orange ;
+    max-width: 200px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+/* list */
+.list {
+    margin-bottom: 15px;
+    background-color: #eeeeeeb3;
+    padding: 15px;
+    border-radius: 5px;
+    transition: 0.8;
+    font-weight:700;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    word-break: break-all;
+    gap: 10px;
+    box-shadow: 0 0 5px orange;
+}
+.click {
+    display: flex;
+    gap: 5px;
+}
+.click span {
+    padding: 3px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    flex-shrink: 1;
+}
+.click span:first-of-type {
+    background-color: orange;
+}
+.click span {
+    background-color: red;
+}
+/* done */
+.done {
+    opacity: 0.5;
+    text-decoration:line-through;
+    box-shadow: 0 0 0px orange;
+}
+/* رساله */
+.dola{
+    background-color: #eee;
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position:relative;
+    left:50%;
+    top: 50%;
+    transform:  translate( -50% , -50%) scale(0) ;
+    transition: 0.9s;
+    opacity: 0;
+}
+h2 {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+p {
+    font-size: 19px;
+    margin-top:0px;
+    margin-bottom:10px;
+    padding:0px 15px;
+}
+.q {
+    display: block;
+    margin-bottom: 10px;
+    color:orange;
+}
+
+div button {
+    background-color: red;
+    color: wheat;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -10px;
+    right:-10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+}
+.up {
+    position:fixed;
+    right: 10px;
+    bottom: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: orange;
+    font-weight: bold;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    z-index: 1;
+    display: none;
+    transition: 0.8s;
+    opacity: 0;
+}
